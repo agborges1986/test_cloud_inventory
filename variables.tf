@@ -36,10 +36,10 @@ variable "bundle_path_cffile" {
 variable "cai_config" {
   description = "Cloud Asset Inventory export config."
   type = object({
-    bq_dataset         = string
-    bq_table           = string
+    bq_dataset         = "bq_export_inventory"
+    bq_table           = "tb_inventory"
     bq_table_overwrite = bool
-    target_node        = string
+    target_node        = "projects/arquitectura-ventas"
   })
 }
 
